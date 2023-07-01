@@ -1,0 +1,113 @@
+header {
+    top: 0;
+    left: 0;
+    width: 99%;
+    background-image: linear-gradient(#6F1D1B, #432818);
+    color: #FFE6A7;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+    position: relative;
+    animation-name: entradaDesdeArriba;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes entradaDesdeArriba {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    color: #FFE6A7;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav a:hover {
+    color: #BB9457;
+    font-size: 28px;
+}
+
+#logo {
+    height: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(#BB9457, #99582A);
+    color: #FFE6A7;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gallery-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.like-button,
+.share-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.like-button:hover,
+.share-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
